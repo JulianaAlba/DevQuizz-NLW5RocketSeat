@@ -20,11 +20,12 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBarWidget(),
 
       body: Padding(
-        // Na aula o valor de horizontal era 20, mas extrapolou a tela do emulador atual
-        padding: const EdgeInsets.symmetric(horizontal: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 10,),
 
           child: Column(
            children: [
+
+             SizedBox(height: 20),
 
              Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -38,8 +39,29 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
 
+
+            SizedBox(height: 20,),
+
+
           //Chamando cards brancos verticais
-            QuizCardWidget(),
+             Expanded(
+               child: GridView.count( //Comando similar ao listview, porém, esse comando ainda define a quantidade com crossAxisCount, de quantos componentes por linha
+                 crossAxisCount: 2,
+                 crossAxisSpacing: 16,
+                 mainAxisSpacing: 16, //Espaçamentos entre os cards brancos
+
+                 children: [
+                   QuizCardWidget(),
+                   QuizCardWidget(),
+                   QuizCardWidget(),
+                   QuizCardWidget(),
+
+                 ],
+               ),
+             ),
+
+
+
 
           ],
         ),

@@ -19,7 +19,8 @@ class QuizCardWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
 
-      child: Container(
+      child:
+      Container(
         padding: EdgeInsets.all(15),
         decoration: BoxDecoration(
           border: Border.fromBorderSide(BorderSide(color: AppColors.border)),
@@ -28,24 +29,24 @@ class QuizCardWidget extends StatelessWidget {
         ),
 
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start, //Coluna iniciando normal, à esquerda
           mainAxisAlignment: MainAxisAlignment.center,
 
           children: [
 
             //Primeiro item quadrado branco
             Container(
-              height: 40,
-              width: 40,
+              height: 20,
+              width: 20,
               //color: AppColors.red,
               child: Image.asset(AppImages.blocks),
             ),
 
             // Definindo espaçamentos de cada item do card branco quadrado
-            SizedBox(height: 25),
+            SizedBox(height: 20),
             //Segundo item quadrado branco
             Text('Gerenciamento de Estado', style: AppTextStyles.heading15),
-            SizedBox(height: 25),
+            SizedBox(height: 20),
 
             Row(
               children: [
