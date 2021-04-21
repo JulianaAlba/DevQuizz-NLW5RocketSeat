@@ -3,6 +3,7 @@ import 'package:devquiz/core/app_text_styles.dart';
 import 'package:devquiz/home/widgets/score_card/score_card_widget.dart';
 import 'package:flutter/material.dart';
 
+// TELA HOME COM GRADIENTE, QUE CHAMA A CLASSE DO CARD BRANCO QUE FICA EM CIMA
 
 class AppBarWidget extends PreferredSize{
   AppBarWidget()
