@@ -1,5 +1,6 @@
 
 import 'package:devquiz/core/app_images.dart';
+import 'package:devquiz/home/home_repository.dart';
 import 'package:devquiz/home/home_state.dart';
 import 'package:devquiz/shard/models/awnser_model.dart';
 import 'package:devquiz/shard/models/question_model.dart';
@@ -19,45 +20,21 @@ class HomeController {
   // Controlar Quizzes
   List<QuizModel>? quizzes;
 
+  final repository = HomeRepository();
+
   
   void getUser() async {
     state = HomeState.loading;
-    await Future.delayed(Duration(seconds: 2));
-
-    user = UserModel(name: "Juliana Alba", photoUrl: "https://avatars.githubusercontent.com/u/12674919?v=4",);
+    user = await repository.getUser();
+    //print (user?.toJson());
     state = HomeState.sucess;
   }
 
 
   void getQuizzes() async {
     state = HomeState.loading;
-    await Future.delayed(Duration(seconds: 2));
-
-    quizzes = [QuizModel(
-      title: "NLW 5 Flutter",
-      imagem: AppImages.blocks,
-      level: Level.facil,
-
-        questionAnswered: 1,
-
-        questions: [
-          QuestionModel(title: "Está curtindo o Flutter?", awnsers: [
-            AwnserModel(title: "Estou amando o flutter!"),
-            AwnserModel(title: "Estou adorando o flutter!"),
-            AwnserModel(title: "Estou indiferente ao flutter!"),
-            AwnserModel(title: "Estou odiando o flutter!", isRight: true),
-            ]),
-
-          QuestionModel(title: "Está curtindo o Flutter?", awnsers: [
-            AwnserModel(title: "Estou amando o flutter!"),
-            AwnserModel(title: "Estou adorando o flutter!"),
-            AwnserModel(title: "Estou indiferente ao flutter!"),
-            AwnserModel(title: "Estou odiando o flutter!", isRight: true),
-          ]),
-
-
-          ])];
-
+    quizzes = await repository.getQuizzes();
+    //print(quizzes?.length);
     state = HomeState.sucess;
 
   }
