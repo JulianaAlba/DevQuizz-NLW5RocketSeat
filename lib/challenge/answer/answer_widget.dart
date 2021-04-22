@@ -18,7 +18,7 @@ class AnswerWidget extends StatelessWidget {
   }) : super(key: key);
 
 
-  // INÍCIO BLOCO DE CÓDIGO JAVASCRIPT - para analisar as cores do box
+  // INÍCIO BLOCO DE CÓDIGO SWIFT - para analisar as cores do box
 
   Color get _selectedColorRight =>
       isRight ? AppColors.darkGreen : AppColors.darkRed;
@@ -37,7 +37,7 @@ class AnswerWidget extends StatelessWidget {
 
   IconData get _selectedIconRight => isRight ? Icons.check : Icons.close;
 
-  // FIM BLOCO DE CÓDIGO JAVASCRIPT - para analisar as cores do box
+  // FIM BLOCO DE CÓDIGO SWIFT - para analisar as cores do box
 
 
   @override

@@ -7,11 +7,17 @@ import 'package:flutter/material.dart';
 //Classe com a programação dos Componentes do card branco quadrado
 
 class QuizCardWidget extends StatelessWidget {
+  final String title;
+  final String completed;
+  final double percent;
   //final int currentQuestion;
   //final int totalQuestions = 10;
 
   const QuizCardWidget({
     Key? key,
+    required this.title,
+    required this.completed,
+    required this.percent,
     //required this.currentQuestion,
   }) : super(key: key);
 
@@ -45,8 +51,8 @@ class QuizCardWidget extends StatelessWidget {
 
             // Definindo espaçamentos de cada item do card branco quadrado
             SizedBox(height: 20),
-            //Segundo item quadrado branco
-            Text('Gerenciamento de Estado', style: AppTextStyles.heading15),
+            //Segundo item quadrado branco //recebendo title do controller
+            Text(title, style: AppTextStyles.heading15),
             SizedBox(height: 20),
 
             Row(
@@ -54,13 +60,14 @@ class QuizCardWidget extends StatelessWidget {
                 //Terceiro item quadrado branco
                 Expanded(
                   flex: 1,
-                  child: Text("3 de 10",
+                  child: Text(completed, //recebendo quantas questoes completou, do controller
                       style: AppTextStyles.body11),
                 ),
                 Expanded(
                   //Quarto item quadrado branco
                   flex: 2,
-                  child: ProgressIndicatorWidget( value: 0.3,),
+                  //recebendo porcentagem de conclusão de questoes realizadas
+                  child: ProgressIndicatorWidget( value: percent),
                   ),
               ],
             )
