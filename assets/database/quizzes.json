@@ -11,7 +11,7 @@
       {
       "title": "Está curtindo o Flutter?",
         "answers": [{
-          "title": " Estou amando o flutter!"},
+          "title": " Estou amando o flutter!", "isRight": true},
           {"title": " Estou adorando o flutter!"},
           {"title": " Estou indiferente ao flutter!"},
           {"title": " Estou odiando o flutter!"}
@@ -20,12 +20,12 @@
 
 
       {
-      "title": "Está curtindo o Flutter?",
+      "title": "Está curtindo a NLW?",
         "answers": [{
-          "title": " Estou amando o flutter!"},
-          {"title": " Estou adorando o flutter!"},
-          {"title": " Estou indiferente ao flutter!"},
-          {"title": " Estou odiando o flutter!"}
+          "title": " Estou amando a NLW!" },
+          {"title": " Estou adorando a NLW!", "isRight": true},
+          {"title": " Estou indiferente a NLW!"},
+          {"title": " Estou odiando o NLW!"}
         ]
       }
 

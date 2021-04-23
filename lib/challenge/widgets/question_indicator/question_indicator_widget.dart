@@ -5,7 +5,11 @@ import 'package:flutter/material.dart';
 // App bar da tela de desafios
 
 class QuestionIndicatorWidget extends StatelessWidget {
-  
+  final int currentPage;
+  final int length;
+
+  const QuestionIndicatorWidget({Key? key, required this.currentPage, required this.length}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,11 +25,11 @@ class QuestionIndicatorWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
               children: [
-                Text("Questão 04",
+                Text("Questão ${currentPage}",
                 style: AppTextStyles.body,
                 ),
 
-                Text("de 10",
+                Text("de ${length}",
                   style: AppTextStyles.body,
                 ),
 
@@ -39,7 +43,7 @@ class QuestionIndicatorWidget extends StatelessWidget {
 
           SizedBox(height: 16,),
 
-          ProgressIndicatorWidget(value: 0.7),
+          ProgressIndicatorWidget(value: currentPage/length),
 
 
         ],
