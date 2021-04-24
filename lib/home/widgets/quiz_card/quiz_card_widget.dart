@@ -48,8 +48,8 @@ class QuizCardWidget extends StatelessWidget {
 
               //Primeiro item quadrado branco
               Container(
-                height: 20,
-                width: 20,
+                height: 40,
+                width: 40,
                 //color: AppColors.red,
                 child: Image.asset(AppImages.blocks),
               ),

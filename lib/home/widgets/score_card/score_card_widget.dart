@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 // CLASSE DO CARD BRANCO QUE FICA EM CIMA E CHAMA A CLASSE COM O GRÁFICO CHARBAR
 
 class ScoreCardWidget extends StatelessWidget {
+  final double percent;
+  const ScoreCardWidget({Key? key, required this.percent}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,7 @@ class ScoreCardWidget extends StatelessWidget {
                   flex: 1,
 
                   //Chamando a classe char_widget = imagem do gráfico %
-                  child: ChartWidget(),
+                  child: ChartWidget(percent: percent,),
                 ),
 
 
