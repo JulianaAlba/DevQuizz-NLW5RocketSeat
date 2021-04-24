@@ -1,4 +1,3 @@
-import 'package:devquiz/core/app_images.dart';
 import 'package:devquiz/core/app_text_styles.dart';
 import 'package:devquiz/core/core.dart';
 import 'package:devquiz/home/widgets/next_button/next_button_widget.dart';
@@ -89,7 +88,7 @@ class ResultPage extends StatelessWidget {
                           onTap: () {
                             //Adicionado plugin share_plus no projeto e pubspec foi atualizado automaticamente
                             Share.share(
-                                "App DevQuiz - Resultado do Quiz: $resultadoMensagem.\n Obtive: $result / $length de aproveitamento!",
+                                'App DevQuiz - Resultado do Quiz: $resultadoMensagem.\n Obtive: $result / $length de aproveitamento!', subject: "hello",
                             );
                           },
                         ),
