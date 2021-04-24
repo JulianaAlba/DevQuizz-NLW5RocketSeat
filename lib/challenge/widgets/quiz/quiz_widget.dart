@@ -8,13 +8,14 @@ import 'package:flutter/material.dart';
 class QuizWidget extends StatefulWidget {
   //final String title; //COMENTEI POR ÚLTIMO PARA TIRAR O TÍTULO
   final QuestionModel question;
-  final VoidCallback onChange;
+  //final VoidCallback onChange;
+  final ValueChanged<bool> onSelected;
 
   const QuizWidget({
     Key? key,
    // this.title, //COMENTEI POR ÚLTIMO PARA TIRAR O TÍTULO
     required this.question,
-    required this.onChange,
+    required this.onSelected,
   }) : super(key: key);
   
   @override
@@ -48,12 +49,12 @@ class _QuizWidgetState extends State<QuizWidget> {
               awnser: answer(i),
               disabled: indexSelected != -1,
               isSelected: indexSelected == i,
-              onTap: (){
+              onTap: (value){
                 //print(i);
                 indexSelected = i;
                 //widget.onChange();
                 setState(() { });
-                Future.delayed(Duration(seconds: 1)).then((value) => widget.onChange());
+                Future.delayed(Duration(seconds: 1)).then((_) => widget.onSelected(value));
               },
               //isRight: answer(i).isRight,
               //isSelected: false,

@@ -2,14 +2,16 @@ import 'package:devquiz/challenge/challenge_controller.dart';
 import 'package:devquiz/challenge/widgets/question_indicator/question_indicator_widget.dart';
 import 'package:devquiz/challenge/widgets/quiz/quiz_widget.dart';
 import 'package:devquiz/home/widgets/next_button/next_button_widget.dart';
+import 'package:devquiz/result/result_page.dart';
 import 'package:devquiz/shard/models/question_model.dart';
 import 'package:flutter/material.dart';
 
 
 class ChallengePage extends StatefulWidget {
   final List<QuestionModel> questions;
+  final String title;
 
-  ChallengePage({Key? key, required this.questions,}) : super(key: key);
+  ChallengePage({Key? key, required this.questions, required this.title}) : super(key: key);
 
   @override
   _ChallengePageState createState() => _ChallengePageState();
@@ -33,6 +35,12 @@ class _ChallengePageState extends State<ChallengePage> {
     pageController.nextPage(duration: Duration(milliseconds: 100), curve: Curves.linear);
   }
 
+  void onSelected(bool value){
+    if(value){
+      controller.qtdAcertos++;
+    }
+    nextPage();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -74,7 +82,7 @@ class _ChallengePageState extends State<ChallengePage> {
       body: PageView(
         physics: NeverScrollableScrollPhysics(), //Comando para travar o scroll lateral e deixar a tela estática sem deslize
         controller: pageController,
-        children: widget.questions.map((e) => QuizWidget(question: e, onChange: nextPage, ),).toList(), ////TIREI POR ÚLTIMO O TÍTULO
+        children: widget.questions.map((e) => QuizWidget(question: e, onSelected: onSelected, ),).toList(), ////TIREI POR ÚLTIMO O TÍTULO
       ),
 
       //QuizWidget(question: widget.questions[0], title: "",),
@@ -105,7 +113,10 @@ class _ChallengePageState extends State<ChallengePage> {
                     child: NextButtonWidget.green(
                       label: "Confirmar",
                       onTap: (){
-                        Navigator.pop(context);
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(builder: (context) => ResultPage(title: widget.title, length: widget.questions.length, result: controller.qtdAcertos,)),
+                        );
                       },
                     ),
                   ),
