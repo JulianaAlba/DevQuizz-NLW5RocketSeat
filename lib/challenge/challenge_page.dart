@@ -1,6 +1,7 @@
 import 'package:devquiz/challenge/challenge_controller.dart';
 import 'package:devquiz/challenge/widgets/question_indicator/question_indicator_widget.dart';
 import 'package:devquiz/challenge/widgets/quiz/quiz_widget.dart';
+import 'package:devquiz/core/app_images.dart';
 import 'package:devquiz/home/widgets/next_button/next_button_widget.dart';
 import 'package:devquiz/result/result_page.dart';
 import 'package:devquiz/shard/models/question_model.dart';
@@ -21,6 +22,34 @@ class _ChallengePageState extends State<ChallengePage> {
   final controller = ChallengeController();
   final pageController = PageController();
 
+
+  // FUNÇÃO EXTRA DE ALTERAÇÃO DE IMAGEM
+  String FuncaoResultadoImagem(){
+    if(widget.questions.length ==  controller.qtdAcertos){ // Resultado máximo
+      return AppImages.trophy;}
+    else if (0 == controller.qtdAcertos){ //Resultado 0
+      return AppImages.error;}
+    else{
+      return AppImages.check;}
+
+  }
+
+  // FUNÇÃO EXTRA DE ALTERAÇÃO DE MENSAGEM
+  String FuncaoResultadoMensagem(){
+    if(widget.questions.length ==  controller.qtdAcertos){ // Resultado máximo
+      return "Parabéns, você foi Excelente!";}
+    else if (0 == controller.qtdAcertos){ //Resultado 0
+      return "Não desista, você pode melhorar!";}
+    else{
+      return "Parabéns, você foi Bem!";}
+
+
+
+  }
+
+  //widget.title
+
+
   @override
   void initState(){
     pageController.addListener(() {
@@ -32,7 +61,7 @@ class _ChallengePageState extends State<ChallengePage> {
   //Função com Animação de passagem de tela, scroll lateral, deslize definido por tempo
   void nextPage(){
     if (controller.currentPage < widget.questions.length)
-    pageController.nextPage(duration: Duration(milliseconds: 100), curve: Curves.linear);
+    pageController.nextPage(duration: Duration(milliseconds: 200), curve: Curves.linear);
   }
 
   void onSelected(bool value){
@@ -111,11 +140,11 @@ class _ChallengePageState extends State<ChallengePage> {
                 if (value == widget.questions.length)
                   Expanded(
                     child: NextButtonWidget.green(
-                      label: "Confirmar",
+                      label: "Finalizar",
                       onTap: (){
                         Navigator.pushReplacement(
                           context,
-                          MaterialPageRoute(builder: (context) => ResultPage(title: widget.title, length: widget.questions.length, result: controller.qtdAcertos,)),
+                          MaterialPageRoute(builder: (context) => ResultPage(length: widget.questions.length, result: controller.qtdAcertos, resultadoImagem: FuncaoResultadoImagem(), resultadoMensagem: FuncaoResultadoMensagem(),)),
                         );
                       },
                     ),

@@ -1,25 +1,34 @@
 import 'package:devquiz/core/app_images.dart';
 import 'package:devquiz/core/app_text_styles.dart';
+import 'package:devquiz/core/core.dart';
 import 'package:devquiz/home/widgets/next_button/next_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 
 class ResultPage extends StatelessWidget {
-  final String title;
+  //final String title;
   final int length;
   final int result;
+  String resultadoImagem;
+  String resultadoMensagem;
 
-  const ResultPage(
+  ResultPage(
       {Key? key,
-        required this.title,
+        //required this.title,
         required this.length,
-        required this.result
+        required this.result,
+        required this.resultadoImagem,
+        required this.resultadoMensagem,
+
       })
       : super(key: key);
 
 
   @override
   Widget build(BuildContext context) {
+
+
+
     return Scaffold(
       body: Container(
         width: double.maxFinite,
@@ -31,12 +40,12 @@ class ResultPage extends StatelessWidget {
 
           children: [
 
-            Image.asset(AppImages.trophy),
+            Image.asset(resultadoImagem), //IMAGEM DINÂMICA
 
             Column(
               children: [
                 Text(
-                  "Parabéns!",
+                  (resultadoMensagem), //MENSAGEM DINÂMICA
                   textAlign: TextAlign.center,
                   style: AppTextStyles.heading40,
                 ),
@@ -49,12 +58,13 @@ class ResultPage extends StatelessWidget {
                     style: AppTextStyles.body,
                     children: [
                       TextSpan(
-                        text: "\n$title",
-                        style: AppTextStyles.bodyBold,
+                        text: "\no desafio com",
+                        //text: "\n$resultadoMensagem",
+                        style: AppTextStyles.body,
                       ),
                       TextSpan(
-                        text: "\ncom $result de $length acertos",
-                        style: AppTextStyles.body,
+                        text: "\n$result de $length acertos",
+                        style: AppTextStyles.bodyBold,
                       ),
                     ],
                   ),
@@ -79,7 +89,7 @@ class ResultPage extends StatelessWidget {
                           onTap: () {
                             //Adicionado plugin share_plus no projeto e pubspec foi atualizado automaticamente
                             Share.share(
-                                "App DevQuiz - Resultado do Quiz: $title.\n Obtive: $result / $length de aproveitamento!",
+                                "App DevQuiz - Resultado do Quiz: $resultadoMensagem.\n Obtive: $result / $length de aproveitamento!",
                             );
                           },
                         ),

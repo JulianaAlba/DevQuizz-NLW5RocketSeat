@@ -1,12 +1,24 @@
 [
+
+
+
   {
 
-
-    "title": "NLW 5 Flutter",
+    "title": "Quiz Flutter",
     "imagem": "blocks",
     "level": "facil",
     "questionAnswered": 1,
     "questions": [
+
+      {
+        "title": "Está curtindo a NLW?",
+        "answers": [{
+          "title": " Estou amando a NLW!" },
+          {"title": " Estou adorando a NLW!", "isRight": true},
+          {"title": " Estou indiferente a NLW!"},
+          {"title": " Estou odiando o NLW!"}
+        ]
+      },
 
       {
       "title": "Está curtindo o Flutter?",
@@ -19,20 +31,248 @@
       },
 
 
+
       {
-      "title": "Está curtindo a NLW?",
+        "title": "Qual empresa fundou o Flutter?",
+        "answers": [
+          {"title": "Google", "isRight": true},
+          {"title": "Facebook"},
+          {"title": "Uber"},
+          {"title": "Microsoft"}
+        ]
+      },
+
+
+      {
+        "title": "Qual linguagem é utilizada no Flutter?",
+        "answers": [
+          {"title": "JavaScript"},
+          {"title": "Java"},
+          {"title": "Dart", "isRight": true},
+          {"title": "SQL"}
+        ]
+      },
+
+      {
+        "title": "O que o Flutter faz em sua totalidade",
+        "answers": [
+          {"title": "Kit de desenvolvimento de interface de usuário"},
+          {"title": "Possibilita a criação de aplicativos compilados nativamente", "isRight": true},
+          {"title": "Marca de café do Himalaia"},
+          {"title": "Possibilita a criação de desktops que são muito incríveis"}
+        ]
+      }
+    ]
+
+  },
+
+
+
+
+  {
+
+
+    "title": "Quiz Node",
+    "imagem": "blocks",
+    "level": "facil",
+    "questionAnswered": 1,
+    "questions": [
+
+      {
+        "title": "Está curtindo o Flutter?",
+        "answers": [{
+          "title": " Estou amando o flutter!", "isRight": true},
+          {"title": " Estou adorando o flutter!"},
+          {"title": " Estou indiferente ao flutter!"},
+          {"title": " Estou odiando o flutter!"}
+        ]
+      },
+
+
+      {
+        "title": "Está curtindo a NLW?",
         "answers": [{
           "title": " Estou amando a NLW!" },
           {"title": " Estou adorando a NLW!", "isRight": true},
           {"title": " Estou indiferente a NLW!"},
           {"title": " Estou odiando o NLW!"}
         ]
+      },
+
+
+      {
+        "title": "Qual empresa fundou o Flutter?",
+        "answers": [
+          {"title": "Google", "isRight": true},
+          {"title": "Facebook"},
+          {"title": "Uber"},
+          {"title": "Microsoft"}
+        ]
+      },
+
+
+      {
+        "title": "Qual linguagem é utilizada no Flutter?",
+        "answers": [
+          {"title": "JavaScript"},
+          {"title": "Java"},
+          {"title": "Dart", "isRight": true},
+          {"title": "SQL"}
+        ]
+      },
+
+      {
+        "title": "O que o Flutter faz em sua totalidade",
+        "answers": [
+          {"title": "Kit de desenvolvimento de interface de usuário"},
+          {"title": "Possibilita a criação de aplicativos compilados nativamente",
+            "isRight": true},
+          {"title": "Marca de café do Himalaia"},
+          {"title": "Possibilita a criação de desktops que são muito incríveis"}
+        ]
       }
-
-
     ]
 
+  },
 
+
+  {
+
+
+    "title": "Quiz ReactJS",
+    "imagem": "blocks",
+    "level": "facil",
+    "questionAnswered": 1,
+    "questions": [
+
+      {
+        "title": "Está curtindo o Flutter?",
+        "answers": [{
+          "title": " Estou amando o flutter!", "isRight": true},
+          {"title": " Estou adorando o flutter!"},
+          {"title": " Estou indiferente ao flutter!"},
+          {"title": " Estou odiando o flutter!"}
+        ]
+      },
+
+
+      {
+        "title": "Está curtindo a NLW?",
+        "answers": [{
+          "title": " Estou amando a NLW!" },
+          {"title": " Estou adorando a NLW!", "isRight": true},
+          {"title": " Estou indiferente a NLW!"},
+          {"title": " Estou odiando o NLW!"}
+        ]
+      },
+
+
+      {
+        "title": "Qual empresa fundou o Flutter?",
+        "answers": [
+          {"title": "Google", "isRight": true},
+          {"title": "Facebook"},
+          {"title": "Uber"},
+          {"title": "Microsoft"}
+        ]
+      },
+
+
+      {
+        "title": "Qual linguagem é utilizada no Flutter?",
+        "answers": [
+          {"title": "JavaScript"},
+          {"title": "Java"},
+          {"title": "Dart", "isRight": true},
+          {"title": "SQL"}
+        ]
+      },
+
+      {
+        "title": "O que o Flutter faz em sua totalidade",
+        "answers": [
+          {"title": "Kit de desenvolvimento de interface de usuário"},
+          {"title": "Possibilita a criação de aplicativos compilados nativamente",
+            "isRight": true},
+          {"title": "Marca de café do Himalaia"},
+          {"title": "Possibilita a criação de desktops que são muito incríveis"}
+        ]
+      }
+    ]
+
+  },
+
+
+
+
+  {
+
+
+    "title": "Quiz Elixir",
+    "imagem": "blocks",
+    "level": "facil",
+    "questionAnswered": 1,
+    "questions": [
+
+      {
+        "title": "Está curtindo o Flutter?",
+        "answers": [{
+          "title": " Estou amando o flutter!", "isRight": true},
+          {"title": " Estou adorando o flutter!"},
+          {"title": " Estou indiferente ao flutter!"},
+          {"title": " Estou odiando o flutter!"}
+        ]
+      },
+
+
+      {
+        "title": "Está curtindo a NLW?",
+        "answers": [{
+          "title": " Estou amando a NLW!" },
+          {"title": " Estou adorando a NLW!", "isRight": true},
+          {"title": " Estou indiferente a NLW!"},
+          {"title": " Estou odiando o NLW!"}
+        ]
+      },
+
+
+      {
+        "title": "Qual empresa fundou o Flutter?",
+        "answers": [
+          {"title": "Google", "isRight": true},
+          {"title": "Facebook"},
+          {"title": "Uber"},
+          {"title": "Microsoft"}
+        ]
+      },
+
+
+      {
+        "title": "Qual linguagem é utilizada no Flutter?",
+        "answers": [
+          {"title": "JavaScript"},
+          {"title": "Java"},
+          {"title": "Dart", "isRight": true},
+          {"title": "SQL"}
+        ]
+      },
+
+      {
+        "title": "O que o Flutter faz em sua totalidade",
+        "answers": [
+          {"title": "Kit de desenvolvimento de interface de usuário"},
+          {"title": "Possibilita a criação de aplicativos compilados nativamente",
+            "isRight": true},
+          {"title": "Marca de café do Himalaia"},
+          {"title": "Possibilita a criação de desktops que são muito incríveis"}
+        ]
+      }
+    ]
 
   }
+
+
+
+
+
 ]
